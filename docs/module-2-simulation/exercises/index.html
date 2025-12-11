@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-module-2-simulation/exercises/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Module 2 Exercises - Simulation Environments | 🚀 Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://noormusarrat.github.io/hackathon-book-robotics/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://noormusarrat.github.io/hackathon-book-robotics/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-2-simulation/exercises/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Module 2 Exercises - Simulation Environments | 🚀 Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Exercise 1: Gazebo Environment Setup"><meta data-rh="true" property="og:description" content="Exercise 1: Gazebo Environment Setup"><link data-rh="true" rel="icon" href="/hackathon-book-robotics/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-2-simulation/exercises/"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-2-simulation/exercises/" hreflang="en"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/module-2-simulation/exercises/" hreflang="fr"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-2-simulation/exercises/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Module 2 Exercises - Simulation Environments","item":"https://noormusarrat.github.io/hackathon-book-robotics/docs/module-2-simulation/exercises/"}]}</script><link rel="stylesheet" href="/hackathon-book-robotics/assets/css/styles.200c5452.css">
+<script src="/hackathon-book-robotics/assets/js/runtime~main.dd6b3ec8.js" defer="defer"></script>
+<script src="/hackathon-book-robotics/assets/js/main.2dad1c6d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/hackathon-book-robotics/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon-book-robotics/"><div class="navbar__logo"><img src="/hackathon-book-robotics/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon-book-robotics/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/hackathon-book-robotics/docs/intro/">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/hackathon-book-robotics/docs/intro/"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/intro/chapter-1"><span title="Module 0: Introduction to Physical AI" class="categoryLinkLabel_W154">Module 0: Introduction to Physical AI</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-1-ros2/"><span title="Module 1: ROS 2 - Robotic Nervous System" class="categoryLinkLabel_W154">Module 1: ROS 2 - Robotic Nervous System</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-1"><span title="Module 2: Gazebo + Unity - Digital Twin" class="categoryLinkLabel_W154">Module 2: Gazebo + Unity - Digital Twin</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-1"><span title="Chapter 8 - Introduction to Simulation Environments" class="linkLabel_WmDU">Chapter 8 - Introduction to Simulation Environments</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/"><span title="Module 2: Gazebo + Unity - Digital Twin" class="linkLabel_WmDU">Module 2: Gazebo + Unity - Digital Twin</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-2"><span title="Chapter 9 - Gazebo for ROS 2 Integration" class="linkLabel_WmDU">Chapter 9 - Gazebo for ROS 2 Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-3"><span title="Chapter 10 - Physics and Sensors in Gazebo" class="linkLabel_WmDU">Chapter 10 - Physics and Sensors in Gazebo</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-4"><span title="Chapter 11 - Unity for Robotics Visualization" class="linkLabel_WmDU">Chapter 11 - Unity for Robotics Visualization</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-5"><span title="Chapter 12 - Digital Twin Creation Process" class="linkLabel_WmDU">Chapter 12 - Digital Twin Creation Process</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-6"><span title="Chapter 13 - Simulation Best Practices" class="linkLabel_WmDU">Chapter 13 - Simulation Best Practices</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-7"><span title="Chapter 14 - Simulation to Reality Transfer" class="linkLabel_WmDU">Chapter 14 - Simulation to Reality Transfer</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/exercises/"><span title="Module 2 Exercises - Simulation Environments" class="linkLabel_WmDU">Module 2 Exercises - Simulation Environments</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-2-simulation/examples/"><span title="Module 2 Example Code - Simulation Environments" class="linkLabel_WmDU">Module 2 Example Code - Simulation Environments</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-3-isaac/chapter-1"><span title="Module 3: NVIDIA Isaac - Perception + Navigation" class="categoryLinkLabel_W154">Module 3: NVIDIA Isaac - Perception + Navigation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-4-vla/chapter-1"><span title="Module 4: VLA Robotics - Language to Action" class="categoryLinkLabel_W154">Module 4: VLA Robotics - Language to Action</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/hackathon-book-robotics/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 2: Gazebo + Unity - Digital Twin</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Module 2 Exercises - Simulation Environments</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Module 2 Exercises: Simulation Environments</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-1-gazebo-environment-setup">Exercise 1: Gazebo Environment Setup<a href="#exercise-1-gazebo-environment-setup" class="hash-link" aria-label="Direct link to Exercise 1: Gazebo Environment Setup" title="Direct link to Exercise 1: Gazebo Environment Setup" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Easy
+<strong>Type</strong>: Configuration
+<strong>Estimated Time</strong>: 45-60 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective">Objective<a href="#objective" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Set up a complete Gazebo simulation environment for a humanoid robot with proper physics and sensor configurations.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions">Instructions<a href="#instructions" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a URDF model of a simplified humanoid robot with at least 6 degrees of freedom</li>
+<li class="">Configure physics properties including mass, inertia, and friction parameters</li>
+<li class="">Add sensor models (IMU, camera, joint position sensors)</li>
+<li class="">Set up a Gazebo world with obstacles and terrain features</li>
+<li class="">Test the simulation with basic joint movements</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria">Validation Criteria<a href="#validation-criteria" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Robot model loads correctly in Gazebo</li>
+<li class="">Physics parameters are realistic for humanoid dynamics</li>
+<li class="">Sensors publish data at expected rates</li>
+<li class="">Collision detection works properly</li>
+<li class="">Robot maintains stability during basic movements</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps">Implementation Steps<a href="#implementation-steps" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create URDF file with proper joint limits and dynamics</li>
+<li class="">Configure Gazebo plugins for ROS 2 control</li>
+<li class="">Create world file with varied terrain</li>
+<li class="">Test with basic control commands</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-2-unity-ros-integration">Exercise 2: Unity-ROS Integration<a href="#exercise-2-unity-ros-integration" class="hash-link" aria-label="Direct link to Exercise 2: Unity-ROS Integration" title="Direct link to Exercise 2: Unity-ROS Integration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Integration
+<strong>Estimated Time</strong>: 90-120 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-1">Objective<a href="#objective-1" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Integrate Unity visualization with ROS 2 to create a real-time digital twin of the simulated humanoid robot.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-1">Instructions<a href="#instructions-1" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Set up Unity with ROS-TCP-Connector package</li>
+<li class="">Create 3D model of the humanoid robot in Unity</li>
+<li class="">Implement real-time synchronization between Gazebo and Unity</li>
+<li class="">Add visualization features for sensor data</li>
+<li class="">Create basic teleoperation interface in Unity</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-1">Validation Criteria<a href="#validation-criteria-1" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Unity-ROS connection established successfully</li>
+<li class="">Robot state synchronized between Gazebo and Unity in real-time</li>
+<li class="">Sensor data visualized in Unity interface</li>
+<li class="">Teleoperation interface responds correctly to inputs</li>
+<li class="">Visualization performance meets real-time requirements</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-1">Implementation Steps<a href="#implementation-steps-1" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Install and configure ROS-TCP-Connector in Unity</li>
+<li class="">Create humanoid robot model in Unity</li>
+<li class="">Implement joint state synchronization</li>
+<li class="">Add sensor visualization elements</li>
+<li class="">Create UI for teleoperation</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-3-digital-twin-implementation">Exercise 3: Digital Twin Implementation<a href="#exercise-3-digital-twin-implementation" class="hash-link" aria-label="Direct link to Exercise 3: Digital Twin Implementation" title="Direct link to Exercise 3: Digital Twin Implementation" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: System Implementation
+<strong>Estimated Time</strong>: 120-150 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-2">Objective<a href="#objective-2" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Create a comprehensive digital twin system that mirrors the physical/hardware robot state in real-time.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-2">Instructions<a href="#instructions-2" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Implement state synchronization between physical and virtual systems</li>
+<li class="">Create environment mapping and visualization</li>
+<li class="">Add predictive capabilities for future states</li>
+<li class="">Implement analytics and monitoring tools</li>
+<li class="">Test with real sensor data (or realistic simulation)</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-2">Validation Criteria<a href="#validation-criteria-2" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Real-time state synchronization accuracy within 50ms</li>
+<li class="">Environment mapping correctly reflects real world</li>
+<li class="">Prediction algorithms provide useful forecasts</li>
+<li class="">Analytics tools provide meaningful insights</li>
+<li class="">System maintains stable performance during operation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-2">Implementation Steps<a href="#implementation-steps-2" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create core digital twin state management</li>
+<li class="">Implement environment mapping system</li>
+<li class="">Add prediction engine</li>
+<li class="">Create analytics and monitoring interfaces</li>
+<li class="">Test with simulated or real robot data</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-4-physics-parameter-optimization">Exercise 4: Physics Parameter Optimization<a href="#exercise-4-physics-parameter-optimization" class="hash-link" aria-label="Direct link to Exercise 4: Physics Parameter Optimization" title="Direct link to Exercise 4: Physics Parameter Optimization" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Optimization
+<strong>Estimated Time</strong>: 75-90 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-3">Objective<a href="#objective-3" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Optimize physics parameters in Gazebo to achieve realistic humanoid robot behavior while maintaining real-time performance.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-3">Instructions<a href="#instructions-3" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Analyze the effect of different physics parameters on humanoid simulation</li>
+<li class="">Test various solver configurations (ODE, Bullet)</li>
+<li class="">Optimize for both accuracy and performance</li>
+<li class="">Validate with complex multi-joint movements</li>
+<li class="">Document parameter settings for different scenarios</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-3">Validation Criteria<a href="#validation-criteria-3" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Simulation maintains real-time factor &gt; 0.9</li>
+<li class="">Robot dynamics behave realistically</li>
+<li class="">Joint movements are stable and smooth</li>
+<li class="">Physics parameters are properly documented</li>
+<li class="">Performance metrics meet requirements</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-3">Implementation Steps<a href="#implementation-steps-3" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create test scenarios with different movements</li>
+<li class="">Configure different physics engines and parameters</li>
+<li class="">Benchmark performance and accuracy</li>
+<li class="">Optimize for target requirements</li>
+<li class="">Document findings</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-5-sensor-simulation-and-calibration">Exercise 5: Sensor Simulation and Calibration<a href="#exercise-5-sensor-simulation-and-calibration" class="hash-link" aria-label="Direct link to Exercise 5: Sensor Simulation and Calibration" title="Direct link to Exercise 5: Sensor Simulation and Calibration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Calibration
+<strong>Estimated Time</strong>: 90-120 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-4">Objective<a href="#objective-4" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement realistic sensor simulation and calibrate parameters to match real hardware characteristics.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-4">Instructions<a href="#instructions-4" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Configure camera sensor with realistic noise and distortion</li>
+<li class="">Set up IMU with appropriate bias and drift characteristics</li>
+<li class="">Add LiDAR with realistic range and accuracy parameters</li>
+<li class="">Calibrate sensor parameters against real hardware data</li>
+<li class="">Validate sensor data quality and consistency</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-4">Validation Criteria<a href="#validation-criteria-4" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Camera sensor produces realistic images with appropriate noise</li>
+<li class="">IMU provides realistic orientation and acceleration data</li>
+<li class="">LiDAR operates within specified range and accuracy</li>
+<li class="">Sensor parameters calibrated to match real hardware</li>
+<li class="">Data quality meets requirements for perception algorithms</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-4">Implementation Steps<a href="#implementation-steps-4" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Configure camera parameters and noise models</li>
+<li class="">Set up IMU with realistic characteristics</li>
+<li class="">Add LiDAR configuration</li>
+<li class="">Calibrate against real hardware specifications</li>
+<li class="">Validate sensor data quality</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-6-unity-visualization-advanced-features">Exercise 6: Unity Visualization Advanced Features<a href="#exercise-6-unity-visualization-advanced-features" class="hash-link" aria-label="Direct link to Exercise 6: Unity Visualization Advanced Features" title="Direct link to Exercise 6: Unity Visualization Advanced Features" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Advanced Development
+<strong>Estimated Time</strong>: 150-180 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-5">Objective<a href="#objective-5" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement advanced visualization features in Unity for comprehensive robot monitoring and control.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-5">Instructions<a href="#instructions-5" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create comprehensive robot state visualization</li>
+<li class="">Implement trajectory and path planning visualization</li>
+<li class="">Add mixed reality capabilities for AR/VR interfaces</li>
+<li class="">Create advanced control panels and monitoring tools</li>
+<li class="">Implement data logging and analytics visualization</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-5">Validation Criteria<a href="#validation-criteria-5" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Robot state visualized comprehensively and accurately</li>
+<li class="">Trajectory planning visualized with clear representations</li>
+<li class="">AR/VR interfaces function properly</li>
+<li class="">Control panels provide intuitive interaction</li>
+<li class="">Data visualization tools provide meaningful insights</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-5">Implementation Steps<a href="#implementation-steps-5" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Implement comprehensive state visualization</li>
+<li class="">Add trajectory and path visualization</li>
+<li class="">Create AR/VR interface capabilities</li>
+<li class="">Build advanced control panels</li>
+<li class="">Implement data visualization tools</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-7-simulation-to-reality-transfer-validation">Exercise 7: Simulation-to-Reality Transfer Validation<a href="#exercise-7-simulation-to-reality-transfer-validation" class="hash-link" aria-label="Direct link to Exercise 7: Simulation-to-Reality Transfer Validation" title="Direct link to Exercise 7: Simulation-to-Reality Transfer Validation" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Validation
+<strong>Estimated Time</strong>: 120-180 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-6">Objective<a href="#objective-6" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement comprehensive validation system for simulation-to-reality transfer with safety checks.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-6">Instructions<a href="#instructions-6" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create system for comparing sim and real robot behavior</li>
+<li class="">Implement transfer validation metrics and scoring</li>
+<li class="">Add domain randomization techniques for robust transfer</li>
+<li class="">Create adaptation algorithms for sim-to-real differences</li>
+<li class="">Implement safety systems for transfer validation</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-6">Validation Criteria<a href="#validation-criteria-6" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Sim-to-real comparison system functions correctly</li>
+<li class="">Transfer metrics provide meaningful assessment</li>
+<li class="">Domain randomization improves transfer robustness</li>
+<li class="">Adaptation algorithms handle differences effectively</li>
+<li class="">Safety systems prevent unsafe transfers</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-6">Implementation Steps<a href="#implementation-steps-6" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create sim-to-real comparison framework</li>
+<li class="">Implement validation metrics and scoring</li>
+<li class="">Add domain randomization techniques</li>
+<li class="">Create adaptation algorithms</li>
+<li class="">Implement safety validation systems</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-8-multi-robot-simulation-coordination">Exercise 8: Multi-Robot Simulation Coordination<a href="#exercise-8-multi-robot-simulation-coordination" class="hash-link" aria-label="Direct link to Exercise 8: Multi-Robot Simulation Coordination" title="Direct link to Exercise 8: Multi-Robot Simulation Coordination" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Multi-System Integration
+<strong>Estimated Time</strong>: 150-200 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-7">Objective<a href="#objective-7" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Set up multi-robot simulation environment with coordination and communication between humanoid robots.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-7">Instructions<a href="#instructions-7" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create simulation environment for multiple humanoid robots</li>
+<li class="">Implement communication protocols between robots</li>
+<li class="">Set up coordination algorithms for multi-robot tasks</li>
+<li class="">Add collision avoidance and path planning</li>
+<li class="">Test with coordinated multi-robot behaviors</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-7">Validation Criteria<a href="#validation-criteria-7" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Multiple robots simulated simultaneously in real-time</li>
+<li class="">Communication protocols function correctly</li>
+<li class="">Coordination algorithms work as expected</li>
+<li class="">Collision avoidance prevents robot collisions</li>
+<li class="">Multi-robot behaviors execute successfully</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-7">Implementation Steps<a href="#implementation-steps-7" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create multi-robot simulation environment</li>
+<li class="">Implement robot-to-robot communication</li>
+<li class="">Set up coordination algorithms</li>
+<li class="">Add collision avoidance systems</li>
+<li class="">Test coordinated behaviors</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-9-performance-optimization-and-profiling">Exercise 9: Performance Optimization and Profiling<a href="#exercise-9-performance-optimization-and-profiling" class="hash-link" aria-label="Direct link to Exercise 9: Performance Optimization and Profiling" title="Direct link to Exercise 9: Performance Optimization and Profiling" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Optimization
+<strong>Estimated Time</strong>: 90-120 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-8">Objective<a href="#objective-8" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Optimize simulation performance and profile resource usage for humanoid robotics applications.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-8">Instructions<a href="#instructions-8" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Profile current simulation performance and bottlenecks</li>
+<li class="">Optimize physics parameters for better performance</li>
+<li class="">Optimize sensor configurations and update rates</li>
+<li class="">Implement level-of-detail (LOD) systems</li>
+<li class="">Validate performance improvements with metrics</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-8">Validation Criteria<a href="#validation-criteria-8" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Simulation performance improved significantly</li>
+<li class="">Real-time factor maintained &gt; 0.9</li>
+<li class="">Resource usage optimized appropriately</li>
+<li class="">Visual quality maintained for important elements</li>
+<li class="">Performance metrics documented and validated</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-8">Implementation Steps<a href="#implementation-steps-8" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Profile current simulation performance</li>
+<li class="">Optimize physics and collision parameters</li>
+<li class="">Adjust sensor configurations for performance</li>
+<li class="">Implement LOD systems</li>
+<li class="">Validate and document improvements</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-10-safety-system-integration">Exercise 10: Safety System Integration<a href="#exercise-10-safety-system-integration" class="hash-link" aria-label="Direct link to Exercise 10: Safety System Integration" title="Direct link to Exercise 10: Safety System Integration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Safety-Critical Implementation
+<strong>Estimated Time</strong>: 120-150 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-9">Objective<a href="#objective-9" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Integrate comprehensive safety systems into the simulation environment for humanoid robot validation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-9">Instructions<a href="#instructions-9" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Implement emergency stop systems in simulation</li>
+<li class="">Create safety boundary and constraint systems</li>
+<li class="">Add collision detection and prevention</li>
+<li class="">Implement safe trajectory validation</li>
+<li class="">Test safety systems with failure scenarios</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-9">Validation Criteria<a href="#validation-criteria-9" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Emergency stop functions work immediately</li>
+<li class="">Safety boundaries prevent unsafe robot states</li>
+<li class="">Collision detection prevents harmful interactions</li>
+<li class="">Safe trajectory validation operates correctly</li>
+<li class="">Safety systems pass failure scenario tests</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-9">Implementation Steps<a href="#implementation-steps-9" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create emergency stop implementation</li>
+<li class="">Set up safety boundary systems</li>
+<li class="">Add collision detection and prevention</li>
+<li class="">Implement trajectory validation</li>
+<li class="">Test with failure scenarios</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="apa-citations">APA Citations<a href="#apa-citations" class="hash-link" aria-label="Direct link to APA Citations" title="Direct link to APA Citations" translate="no">​</a></h2>
+<ul>
+<li class="">Koenig, N., &amp; Howard, A. (2004). Design and use paradigms for Gazebo, an open-source multi-robot simulator. <em>IEEE/RSJ International Conference on Intelligent Robots and Systems</em>, 2350-2354.</li>
+<li class="">Murai, R., &amp; Kyrki, V. (2021). Simulation to reality transfer in robotics: A survey. <em>IEEE Access</em>, 9, 142395-142418.</li>
+<li class="">Sadeghi, F., &amp; Levine, S. (2017). CAD2RL: Real single-image flight without a single real image. <em>Proceedings of the International Conference on Robotics and Automation</em>.</li>
+<li class="">Unity Technologies. (2022). Unity Robotics Hub: Documentation and tutorials. <em>Unity Developer Documentation</em>.</li>
+<li class="">Open Robotics. (2022). Gazebo simulation best practices: Guidelines for realistic robotics simulation. <em>Gazebo Documentation</em>.</li>
+<li class="">Tedrake, R., Jackowski, Z., Miller, R., Murphey, J., &amp; Erez, T. (2010). Using system identification to obtain reliable models for legged robots. <em>IEEE/RSJ International Conference on Intelligent Robots and Systems</em>, 1417-1423.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/noormusarrat/hackathon-book-robotics/edit/main/docs/module-2-simulation/exercises/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-7"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Chapter 14 - Simulation to Reality Transfer</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/hackathon-book-robotics/docs/module-2-simulation/examples/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Module 2 Example Code - Simulation Environments</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#exercise-1-gazebo-environment-setup" class="table-of-contents__link toc-highlight">Exercise 1: Gazebo Environment Setup</a><ul><li><a href="#objective" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-2-unity-ros-integration" class="table-of-contents__link toc-highlight">Exercise 2: Unity-ROS Integration</a><ul><li><a href="#objective-1" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-1" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-1" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-1" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-3-digital-twin-implementation" class="table-of-contents__link toc-highlight">Exercise 3: Digital Twin Implementation</a><ul><li><a href="#objective-2" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-2" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-2" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-2" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-4-physics-parameter-optimization" class="table-of-contents__link toc-highlight">Exercise 4: Physics Parameter Optimization</a><ul><li><a href="#objective-3" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-3" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-3" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-3" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-5-sensor-simulation-and-calibration" class="table-of-contents__link toc-highlight">Exercise 5: Sensor Simulation and Calibration</a><ul><li><a href="#objective-4" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-4" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-4" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-4" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-6-unity-visualization-advanced-features" class="table-of-contents__link toc-highlight">Exercise 6: Unity Visualization Advanced Features</a><ul><li><a href="#objective-5" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-5" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-5" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-5" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-7-simulation-to-reality-transfer-validation" class="table-of-contents__link toc-highlight">Exercise 7: Simulation-to-Reality Transfer Validation</a><ul><li><a href="#objective-6" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-6" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-6" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-6" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-8-multi-robot-simulation-coordination" class="table-of-contents__link toc-highlight">Exercise 8: Multi-Robot Simulation Coordination</a><ul><li><a href="#objective-7" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-7" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-7" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-7" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-9-performance-optimization-and-profiling" class="table-of-contents__link toc-highlight">Exercise 9: Performance Optimization and Profiling</a><ul><li><a href="#objective-8" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-8" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-8" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-8" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-10-safety-system-integration" class="table-of-contents__link toc-highlight">Exercise 10: Safety System Integration</a><ul><li><a href="#objective-9" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-9" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-9" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-9" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#apa-citations" class="table-of-contents__link toc-highlight">APA Citations</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon-book-robotics/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Book. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-module-1-ros2/exercises/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Module 1 Exercises - ROS 2 Fundamentals | 🚀 Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://noormusarrat.github.io/hackathon-book-robotics/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://noormusarrat.github.io/hackathon-book-robotics/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-1-ros2/exercises/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Module 1 Exercises - ROS 2 Fundamentals | 🚀 Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Exercise 1: Basic Publisher-Subscriber Pattern"><meta data-rh="true" property="og:description" content="Exercise 1: Basic Publisher-Subscriber Pattern"><link data-rh="true" rel="icon" href="/hackathon-book-robotics/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-1-ros2/exercises/"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-1-ros2/exercises/" hreflang="en"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/module-1-ros2/exercises/" hreflang="fr"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-1-ros2/exercises/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Module 1 Exercises","item":"https://noormusarrat.github.io/hackathon-book-robotics/docs/module-1-ros2/exercises/"}]}</script><link rel="stylesheet" href="/hackathon-book-robotics/assets/css/styles.200c5452.css">
+<script src="/hackathon-book-robotics/assets/js/runtime~main.dd6b3ec8.js" defer="defer"></script>
+<script src="/hackathon-book-robotics/assets/js/main.2dad1c6d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/hackathon-book-robotics/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon-book-robotics/"><div class="navbar__logo"><img src="/hackathon-book-robotics/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon-book-robotics/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/hackathon-book-robotics/docs/intro/">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/hackathon-book-robotics/docs/intro/"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/intro/chapter-1"><span title="Module 0: Introduction to Physical AI" class="categoryLinkLabel_W154">Module 0: Introduction to Physical AI</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/hackathon-book-robotics/docs/module-1-ros2/"><span title="Module 1: ROS 2 - Robotic Nervous System" class="categoryLinkLabel_W154">Module 1: ROS 2 - Robotic Nervous System</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-1-ros2/"><span title="Module 1 Overview" class="linkLabel_WmDU">Module 1 Overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/hackathon-book-robotics/docs/module-1-ros2/chapter-1"><span title="Chapters" class="categoryLinkLabel_W154">Chapters</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/hackathon-book-robotics/docs/module-1-ros2/exercises/"><span title="Exercises and Examples" class="categoryLinkLabel_W154">Exercises and Examples</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/hackathon-book-robotics/docs/module-1-ros2/exercises/"><span title="Module 1 Exercises" class="linkLabel_WmDU">Module 1 Exercises</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-1-ros2/examples/"><span title="Example Code" class="linkLabel_WmDU">Example Code</span></a></li></ul></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-1"><span title="Module 2: Gazebo + Unity - Digital Twin" class="categoryLinkLabel_W154">Module 2: Gazebo + Unity - Digital Twin</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-3-isaac/chapter-1"><span title="Module 3: NVIDIA Isaac - Perception + Navigation" class="categoryLinkLabel_W154">Module 3: NVIDIA Isaac - Perception + Navigation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-4-vla/chapter-1"><span title="Module 4: VLA Robotics - Language to Action" class="categoryLinkLabel_W154">Module 4: VLA Robotics - Language to Action</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/hackathon-book-robotics/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 1: ROS 2 - Robotic Nervous System</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Exercises and Examples</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Module 1 Exercises</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Module 1 Exercises: ROS 2 Fundamentals</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-1-basic-publisher-subscriber-pattern">Exercise 1: Basic Publisher-Subscriber Pattern<a href="#exercise-1-basic-publisher-subscriber-pattern" class="hash-link" aria-label="Direct link to Exercise 1: Basic Publisher-Subscriber Pattern" title="Direct link to Exercise 1: Basic Publisher-Subscriber Pattern" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Easy
+<strong>Type</strong>: Code
+<strong>Required Tools</strong>: ROS 2 Humble, Python or C++
+<strong>Estimated Time</strong>: 45-60 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective">Objective<a href="#objective" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Create a simple publisher-subscriber pair that demonstrates the basic communication pattern in ROS 2.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions">Instructions<a href="#instructions" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a new ROS 2 package called <code>my_robot_tutorials</code></li>
+<li class="">Implement a publisher node that publishes a <code>std_msgs/String</code> message containing &quot;Hello, ROS 2!&quot; every 2 seconds</li>
+<li class="">Implement a subscriber node that listens to this topic and prints the received message to the console</li>
+<li class="">Use proper node lifecycle management with error handling</li>
+<li class="">Add parameters to control the publishing rate and message content</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria">Validation Criteria<a href="#validation-criteria" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Publisher and subscriber nodes run without errors</li>
+<li class="">Messages are successfully published and received</li>
+<li class="">Parameter changes affect node behavior as expected</li>
+<li class="">Proper error handling is implemented</li>
+<li class="">Code follows ROS 2 best practices</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps">Implementation Steps<a href="#implementation-steps" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create package: <code>ros2 pkg create --build-type ament_python my_robot_tutorials</code></li>
+<li class="">Create publisher script in <code>my_robot_tutorials/my_robot_tutorials/hello_publisher.py</code></li>
+<li class="">Create subscriber script in <code>my_robot_tutorials/my_robot_tutorials/hello_subscriber.py</code></li>
+<li class="">Add executables to <code>setup.py</code></li>
+<li class="">Test with <code>ros2 run</code> commands</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-2-service-implementation">Exercise 2: Service Implementation<a href="#exercise-2-service-implementation" class="hash-link" aria-label="Direct link to Exercise 2: Service Implementation" title="Direct link to Exercise 2: Service Implementation" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Code
+<strong>Required Tools</strong>: ROS 2 Humble, Python or C++
+<strong>Estimated Time</strong>: 60-90 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-1">Objective<a href="#objective-1" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement a service that performs a calculation or provides information about the robot&#x27;s state.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-1">Instructions<a href="#instructions-1" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a custom service definition (<code>.srv</code> file) that takes two numbers and returns their sum and product</li>
+<li class="">Implement a service server that handles the calculation</li>
+<li class="">Implement a service client that calls the service with different inputs</li>
+<li class="">Add error handling for invalid inputs</li>
+<li class="">Test the service with various input combinations</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-1">Validation Criteria<a href="#validation-criteria-1" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Custom service definition compiles successfully</li>
+<li class="">Service server responds correctly to requests</li>
+<li class="">Service client receives and processes responses</li>
+<li class="">Error handling works for invalid inputs</li>
+<li class="">Service follows ROS 2 conventions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-1">Implementation Steps<a href="#implementation-steps-1" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create <code>srv/AddMultiply.srv</code> with appropriate request/response fields</li>
+<li class="">Generate the service definition</li>
+<li class="">Implement server node that processes requests</li>
+<li class="">Implement client node that sends requests</li>
+<li class="">Test with various input values</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-3-action-server-for-robot-movement">Exercise 3: Action Server for Robot Movement<a href="#exercise-3-action-server-for-robot-movement" class="hash-link" aria-label="Direct link to Exercise 3: Action Server for Robot Movement" title="Direct link to Exercise 3: Action Server for Robot Movement" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Code
+<strong>Required Tools</strong>: ROS 2 Humble, Python or C++
+<strong>Estimated Time</strong>: 90-120 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-2">Objective<a href="#objective-2" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Create an action server that simulates moving a robot to a target position with feedback and goal management.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-2">Instructions<a href="#instructions-2" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Define a custom action (<code>.action</code> file) for robot movement with target position and progress feedback</li>
+<li class="">Implement an action server that simulates movement toward a target</li>
+<li class="">Implement an action client that sends movement goals and monitors progress</li>
+<li class="">Include proper goal preemption and cancellation handling</li>
+<li class="">Add realistic simulation of movement time and potential failures</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-2">Validation Criteria<a href="#validation-criteria-2" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Action server correctly handles goals, feedback, and results</li>
+<li class="">Action client can send goals and receive feedback</li>
+<li class="">Goal preemption and cancellation work properly</li>
+<li class="">Error simulation behaves realistically</li>
+<li class="">Action follows ROS 2 best practices</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-2">Implementation Steps<a href="#implementation-steps-2" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create <code>action/MoveToPosition.action</code> with appropriate fields</li>
+<li class="">Generate the action definition</li>
+<li class="">Implement action server with simulation logic</li>
+<li class="">Implement action client with goal monitoring</li>
+<li class="">Test goal preemption and cancellation scenarios</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-4-launch-file-configuration">Exercise 4: Launch File Configuration<a href="#exercise-4-launch-file-configuration" class="hash-link" aria-label="Direct link to Exercise 4: Launch File Configuration" title="Direct link to Exercise 4: Launch File Configuration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Configuration
+<strong>Required Tools</strong>: ROS 2 Humble, Launch system
+<strong>Estimated Time</strong>: 45-60 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-3">Objective<a href="#objective-3" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Create a comprehensive launch file that starts multiple nodes with different configurations.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-3">Instructions<a href="#instructions-3" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a launch file that starts the publisher and subscriber from Exercise 1</li>
+<li class="">Add parameters to configure the behavior of each node</li>
+<li class="">Include conditional startup based on launch arguments</li>
+<li class="">Add nodes for the service server and client from Exercise 2</li>
+<li class="">Include proper error handling and cleanup</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-3">Validation Criteria<a href="#validation-criteria-3" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Launch file starts all specified nodes successfully</li>
+<li class="">Parameters are correctly passed to nodes</li>
+<li class="">Conditional startup works as expected</li>
+<li class="">All nodes can be properly shut down</li>
+<li class="">Launch file follows ROS 2 best practices</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-3">Implementation Steps<a href="#implementation-steps-3" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create <code>launch/multi_node_system.launch.py</code></li>
+<li class="">Define launch arguments for configuration</li>
+<li class="">Create node definitions with parameter overrides</li>
+<li class="">Test launch file with different argument combinations</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-5-node-parameters-and-configuration">Exercise 5: Node Parameters and Configuration<a href="#exercise-5-node-parameters-and-configuration" class="hash-link" aria-label="Direct link to Exercise 5: Node Parameters and Configuration" title="Direct link to Exercise 5: Node Parameters and Configuration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Code
+<strong>Required Tools</strong>: ROS 2 Humble, Parameter system
+<strong>Estimated Time</strong>: 60-75 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-4">Objective<a href="#objective-4" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement parameter handling in a ROS 2 node with runtime updates and configuration files.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-4">Instructions<a href="#instructions-4" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a node that uses multiple parameters for configuration</li>
+<li class="">Implement parameter validation and callbacks for runtime updates</li>
+<li class="">Create a YAML configuration file with different parameter sets</li>
+<li class="">Add command-line parameter overrides</li>
+<li class="">Include parameter change logging and validation</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-4">Validation Criteria<a href="#validation-criteria-4" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Parameters are properly declared and validated</li>
+<li class="">Runtime parameter updates work correctly</li>
+<li class="">Configuration files are loaded successfully</li>
+<li class="">Parameter callbacks execute as expected</li>
+<li class="">Error handling covers invalid parameter values</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-4">Implementation Steps<a href="#implementation-steps-4" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create parameter handling node with callbacks</li>
+<li class="">Define configuration YAML files</li>
+<li class="">Test parameter updates during runtime</li>
+<li class="">Validate parameter constraints</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-6-quality-of-service-qos-configuration">Exercise 6: Quality of Service (QoS) Configuration<a href="#exercise-6-quality-of-service-qos-configuration" class="hash-link" aria-label="Direct link to Exercise 6: Quality of Service (QoS) Configuration" title="Direct link to Exercise 6: Quality of Service (QoS) Configuration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Code
+<strong>Required Tools</strong>: ROS 2 Humble, QoS system
+<strong>Estimated Time</strong>: 75-90 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-5">Objective<a href="#objective-5" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement different QoS profiles to understand their impact on communication reliability and performance.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-5">Instructions<a href="#instructions-5" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create publisher-subscriber pairs with different QoS profiles (reliable vs. best effort)</li>
+<li class="">Test communication under different network conditions</li>
+<li class="">Implement QoS adaptation based on network performance</li>
+<li class="">Measure and compare performance metrics between profiles</li>
+<li class="">Document the trade-offs between reliability and performance</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-5">Validation Criteria<a href="#validation-criteria-5" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Different QoS profiles are correctly implemented</li>
+<li class="">Performance differences are measurable and documented</li>
+<li class="">QoS adaptation logic works as expected</li>
+<li class="">Network performance metrics are collected</li>
+<li class="">Trade-offs are clearly explained</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-5">Implementation Steps<a href="#implementation-steps-5" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create nodes with different QoS configurations</li>
+<li class="">Implement performance measurement tools</li>
+<li class="">Test under various simulated network conditions</li>
+<li class="">Document findings and recommendations</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-7-tf2-transformations-for-humanoid-robot">Exercise 7: TF2 Transformations for Humanoid Robot<a href="#exercise-7-tf2-transformations-for-humanoid-robot" class="hash-link" aria-label="Direct link to Exercise 7: TF2 Transformations for Humanoid Robot" title="Direct link to Exercise 7: TF2 Transformations for Humanoid Robot" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Hard
+<strong>Type</strong>: Code
+<strong>Required Tools</strong>: ROS 2 Humble, TF2 library
+<strong>Estimated Time</strong>: 120-150 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-6">Objective<a href="#objective-6" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement a transform tree for a simplified humanoid robot model with proper coordinate frame management.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-6">Instructions<a href="#instructions-6" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a URDF model of a simplified humanoid robot with basic joint structure</li>
+<li class="">Implement a node that publishes transforms for the robot&#x27;s joints</li>
+<li class="">Use TF2 to query transforms between different parts of the robot</li>
+<li class="">Implement forward and inverse kinematics for a simple limb</li>
+<li class="">Visualize the transform tree in RViz2</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-6">Validation Criteria<a href="#validation-criteria-6" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Transform tree is properly structured and published</li>
+<li class="">TF2 queries return correct transformations</li>
+<li class="">Kinematics calculations are accurate</li>
+<li class="">Visualization shows correct robot pose</li>
+<li class="">Transform tree follows ROS 2 conventions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-6">Implementation Steps<a href="#implementation-steps-6" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create simplified URDF model of humanoid robot</li>
+<li class="">Implement joint state publisher</li>
+<li class="">Use TF2 broadcaster to publish transforms</li>
+<li class="">Implement TF2 listener for querying transforms</li>
+<li class="">Test with RViz2 visualization</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-8-robot-state-publisher-integration">Exercise 8: Robot State Publisher Integration<a href="#exercise-8-robot-state-publisher-integration" class="hash-link" aria-label="Direct link to Exercise 8: Robot State Publisher Integration" title="Direct link to Exercise 8: Robot State Publisher Integration" translate="no">​</a></h2>
+<p><strong>Difficulty</strong>: Medium
+<strong>Type</strong>: Integration
+<strong>Required Tools</strong>: ROS 2 Humble, Robot State Publisher
+<strong>Estimated Time</strong>: 60-75 minutes</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-7">Objective<a href="#objective-7" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Integrate robot state publisher with a URDF model to publish joint transforms automatically.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instructions-7">Instructions<a href="#instructions-7" class="hash-link" aria-label="Direct link to Instructions" title="Direct link to Instructions" translate="no">​</a></h3>
+<ol>
+<li class="">Create a simple URDF model of a robot arm or leg</li>
+<li class="">Implement a joint state publisher that simulates joint positions</li>
+<li class="">Use robot_state_publisher to automatically publish the transform tree</li>
+<li class="">Verify transforms in RViz2</li>
+<li class="">Test with different joint configurations</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-7">Validation Criteria<a href="#validation-criteria-7" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">URDF model loads correctly</li>
+<li class="">Joint states are published at appropriate rate</li>
+<li class="">Transform tree updates in real-time</li>
+<li class="">Robot model displays correctly in RViz2</li>
+<li class="">Joint movements are visualized properly</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-steps-7">Implementation Steps<a href="#implementation-steps-7" class="hash-link" aria-label="Direct link to Implementation Steps" title="Direct link to Implementation Steps" translate="no">​</a></h3>
+<ol>
+<li class="">Create URDF model with proper joint definitions</li>
+<li class="">Implement joint state publisher node</li>
+<li class="">Launch robot_state_publisher with URDF</li>
+<li class="">Visualize in RViz2 with robot model</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="apa-citations">APA Citations<a href="#apa-citations" class="hash-link" aria-label="Direct link to APA Citations" title="Direct link to APA Citations" translate="no">​</a></h2>
+<ul>
+<li class="">Open Robotics. (2023). <em>ROS 2 Tutorials: Exercises and Examples</em>. Retrieved from <a href="https://docs.ros.org/en/humble/Tutorials.html" target="_blank" rel="noopener noreferrer" class="">https://docs.ros.org/en/humble/Tutorials.html</a></li>
+<li class="">Siciliano, B., &amp; Khatib, O. (2016). <em>Springer handbook of robotics</em>. Springer.</li>
+<li class="">Spong, M. W., Hutchinson, S., &amp; Vidyasagar, M. (2020). <em>Robot modeling and control</em>. John Wiley &amp; Sons.</li>
+<li class="">Thrun, S., Burgard, W., &amp; Fox, D. (2005). <em>Probabilistic robotics</em>. MIT Press.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/noormusarrat/hackathon-book-robotics/edit/main/docs/module-1-ros2/exercises/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/hackathon-book-robotics/docs/module-1-ros2/chapter-7"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Chapter 7: ROS 2 Best Practices</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/hackathon-book-robotics/docs/module-1-ros2/examples/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Example Code</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#exercise-1-basic-publisher-subscriber-pattern" class="table-of-contents__link toc-highlight">Exercise 1: Basic Publisher-Subscriber Pattern</a><ul><li><a href="#objective" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-2-service-implementation" class="table-of-contents__link toc-highlight">Exercise 2: Service Implementation</a><ul><li><a href="#objective-1" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-1" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-1" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-1" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-3-action-server-for-robot-movement" class="table-of-contents__link toc-highlight">Exercise 3: Action Server for Robot Movement</a><ul><li><a href="#objective-2" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-2" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-2" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-2" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-4-launch-file-configuration" class="table-of-contents__link toc-highlight">Exercise 4: Launch File Configuration</a><ul><li><a href="#objective-3" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-3" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-3" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-3" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-5-node-parameters-and-configuration" class="table-of-contents__link toc-highlight">Exercise 5: Node Parameters and Configuration</a><ul><li><a href="#objective-4" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-4" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-4" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-4" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-6-quality-of-service-qos-configuration" class="table-of-contents__link toc-highlight">Exercise 6: Quality of Service (QoS) Configuration</a><ul><li><a href="#objective-5" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-5" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-5" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-5" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-7-tf2-transformations-for-humanoid-robot" class="table-of-contents__link toc-highlight">Exercise 7: TF2 Transformations for Humanoid Robot</a><ul><li><a href="#objective-6" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-6" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-6" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-6" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#exercise-8-robot-state-publisher-integration" class="table-of-contents__link toc-highlight">Exercise 8: Robot State Publisher Integration</a><ul><li><a href="#objective-7" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#instructions-7" class="table-of-contents__link toc-highlight">Instructions</a></li><li><a href="#validation-criteria-7" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#implementation-steps-7" class="table-of-contents__link toc-highlight">Implementation Steps</a></li></ul></li><li><a href="#apa-citations" class="table-of-contents__link toc-highlight">APA Citations</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon-book-robotics/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Book. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

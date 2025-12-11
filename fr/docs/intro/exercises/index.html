@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-intro/exercises" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Introduction Module Exercises | 🚀 Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://noormusarrat.github.io/hackathon-book-robotics/fr/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://noormusarrat.github.io/hackathon-book-robotics/fr/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/intro/exercises"><meta data-rh="true" property="og:locale" content="fr"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="fr"><meta data-rh="true" name="docsearch:language" content="fr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Introduction Module Exercises | 🚀 Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Exercise 1: Physical AI Concepts"><meta data-rh="true" property="og:description" content="Exercise 1: Physical AI Concepts"><link data-rh="true" rel="icon" href="/hackathon-book-robotics/fr/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/intro/exercises"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/intro/exercises" hreflang="en"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/intro/exercises" hreflang="fr"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/intro/exercises" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Exercises","item":"https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/intro/exercises"}]}</script><link rel="stylesheet" href="/hackathon-book-robotics/fr/assets/css/styles.200c5452.css">
+<script src="/hackathon-book-robotics/fr/assets/js/runtime~main.81519fc1.js" defer="defer"></script>
+<script src="/hackathon-book-robotics/fr/assets/js/main.007355f4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/hackathon-book-robotics/fr/img/logo.svg"><div role="region" aria-label="Aller au contenu principal"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Aller au contenu principal</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Ouvrir/fermer la barre de navigation" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon-book-robotics/fr/"><div class="navbar__logo"><img src="/hackathon-book-robotics/fr/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon-book-robotics/fr/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/hackathon-book-robotics/fr/docs/intro/">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Basculer entre le mode sombre et clair (actuellement system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Retour au début de la page" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/hackathon-book-robotics/fr/docs/intro/"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/hackathon-book-robotics/fr/docs/intro/chapter-1"><span title="Module 0: Introduction to Physical AI" class="categoryLinkLabel_W154">Module 0: Introduction to Physical AI</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/fr/docs/intro/chapter-1"><span title="Chapter 1: Introduction to Physical AI" class="linkLabel_WmDU">Chapter 1: Introduction to Physical AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/fr/docs/intro/chapter-2"><span title="Chapter 2: Digital-to-Physical AI Transition" class="linkLabel_WmDU">Chapter 2: Digital-to-Physical AI Transition</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/fr/docs/intro/chapter-3"><span title="Chapter 3: Embodied Intelligence Concepts" class="linkLabel_WmDU">Chapter 3: Embodied Intelligence Concepts</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/hackathon-book-robotics/fr/docs/intro/exercises"><span title="Exercises" class="linkLabel_WmDU">Exercises</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/fr/docs/module-1-ros2/"><span title="Module 1: ROS 2 - Robotic Nervous System" class="categoryLinkLabel_W154">Module 1: ROS 2 - Robotic Nervous System</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/fr/docs/module-2-simulation/chapter-1"><span title="Module 2: Gazebo + Unity - Digital Twin" class="categoryLinkLabel_W154">Module 2: Gazebo + Unity - Digital Twin</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/fr/docs/module-3-isaac/chapter-1"><span title="Module 3: NVIDIA Isaac - Perception + Navigation" class="categoryLinkLabel_W154">Module 3: NVIDIA Isaac - Perception + Navigation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/fr/docs/module-4-vla/chapter-1"><span title="Module 4: VLA Robotics - Language to Action" class="categoryLinkLabel_W154">Module 4: VLA Robotics - Language to Action</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Fil d&#x27;Ariane"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Page d&#x27;accueil" class="breadcrumbs__link" href="/hackathon-book-robotics/fr/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 0: Introduction to Physical AI</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Exercises</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">Sur cette page</button></div><div class="theme-doc-markdown markdown"><header><h1>Introduction Module Exercises</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-1-physical-ai-concepts">Exercise 1: Physical AI Concepts<a href="#exercise-1-physical-ai-concepts" class="hash-link" aria-label="Lien direct vers Exercise 1: Physical AI Concepts" title="Lien direct vers Exercise 1: Physical AI Concepts" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand the fundamental differences between digital AI and physical AI systems.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Research and compare the computational requirements for a digital AI system versus a physical AI system performing the same task (e.g., object recognition).</li>
+<li class="">Identify at least 5 additional challenges that physical AI systems face that digital AI systems do not.</li>
+</ol>
+<p><strong>Expected Output</strong>: A 500-word report comparing digital vs. physical AI challenges, with specific examples from humanoid robotics applications.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear identification of at least 5 unique challenges</li>
+<li class="">Specific examples from humanoid robotics</li>
+<li class="">Well-structured comparison report</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-2-digital-to-physical-transition-analysis">Exercise 2: Digital-to-Physical Transition Analysis<a href="#exercise-2-digital-to-physical-transition-analysis" class="hash-link" aria-label="Lien direct vers Exercise 2: Digital-to-Physical Transition Analysis" title="Lien direct vers Exercise 2: Digital-to-Physical Transition Analysis" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Analyze the safety considerations in transitioning from simulation to real-world robot control.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Choose a simple robot behavior (e.g., moving forward until obstacle detected).</li>
+<li class="">List all potential failure modes when transitioning this behavior from simulation to reality.</li>
+<li class="">Design safety mechanisms to handle each failure mode.</li>
+</ol>
+<p><strong>Expected Output</strong>: A failure mode and effects analysis (FMEA) document with safety mechanisms for each identified risk.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Comprehensive identification of failure modes</li>
+<li class="">Appropriate safety mechanisms for each risk</li>
+<li class="">Clear documentation of safety protocols</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-3-embodied-intelligence-exploration">Exercise 3: Embodied Intelligence Exploration<a href="#exercise-3-embodied-intelligence-exploration" class="hash-link" aria-label="Lien direct vers Exercise 3: Embodied Intelligence Exploration" title="Lien direct vers Exercise 3: Embodied Intelligence Exploration" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Investigate how a robot&#x27;s physical form affects its capabilities and limitations.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Compare two different robot morphologies (e.g., wheeled vs. legged) for a specific task.</li>
+<li class="">Analyze how each morphology&#x27;s physical constraints affect its behavioral possibilities.</li>
+<li class="">Identify at least 3 affordances unique to each morphology.</li>
+</ol>
+<p><strong>Expected Output</strong>: A comparative analysis report highlighting how physical form influences intelligent behavior.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear comparison of two morphologies</li>
+<li class="">Identification of morphology-specific affordances</li>
+<li class="">Well-reasoned analysis of form-function relationships</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-4-simulation-vs-reality-challenge">Exercise 4: Simulation vs. Reality Challenge<a href="#exercise-4-simulation-vs-reality-challenge" class="hash-link" aria-label="Lien direct vers Exercise 4: Simulation vs. Reality Challenge" title="Lien direct vers Exercise 4: Simulation vs. Reality Challenge" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand the &quot;reality gap&quot; and its implications for robotics development.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Implement a simple behavior in simulation (e.g., following a wall).</li>
+<li class="">Identify at least 3 factors that might cause different behavior in the real world.</li>
+<li class="">Propose methods to bridge the simulation-to-reality gap.</li>
+</ol>
+<p><strong>Expected Output</strong>: A report on the reality gap with specific examples and mitigation strategies.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear identification of simulation-reality differences</li>
+<li class="">Practical strategies for bridging the gap</li>
+<li class="">Evidence-based reasoning for proposed solutions</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-5-sensor-integration-challenge">Exercise 5: Sensor Integration Challenge<a href="#exercise-5-sensor-integration-challenge" class="hash-link" aria-label="Lien direct vers Exercise 5: Sensor Integration Challenge" title="Lien direct vers Exercise 5: Sensor Integration Challenge" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand how multiple sensors work together in embodied systems.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design a simple behavior that requires multiple sensor inputs (e.g., navigation using camera and IMU).</li>
+<li class="">Explain how the system would handle the failure of one sensor type.</li>
+<li class="">Describe how sensor fusion improves the behavior compared to single-sensor approaches.</li>
+</ol>
+<p><strong>Expected Output</strong>: A sensor integration plan with fault-tolerance strategies and fusion benefits analysis.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Comprehensive sensor integration approach</li>
+<li class="">Robust fault-tolerance strategies</li>
+<li class="">Clear explanation of fusion benefits</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-6-environmental-interaction-challenge">Exercise 6: Environmental Interaction Challenge<a href="#exercise-6-environmental-interaction-challenge" class="hash-link" aria-label="Lien direct vers Exercise 6: Environmental Interaction Challenge" title="Lien direct vers Exercise 6: Environmental Interaction Challenge" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Explore how environmental factors affect physical AI systems.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Implement a simple robot behavior (e.g., wall following) in simulation</li>
+<li class="">Test the same behavior in environments with different characteristics (friction, lighting, obstacles)</li>
+<li class="">Analyze how environmental changes affect the robot&#x27;s behavior</li>
+<li class="">Propose adaptive mechanisms to handle environmental variability</li>
+</ol>
+<p><strong>Expected Output</strong>: A report on environmental effects with adaptive behavior strategies.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear identification of environmental factors that affect behavior</li>
+<li class="">Effective adaptive strategies for handling environmental changes</li>
+<li class="">Well-structured analysis of environment-behavior interactions</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-7-embodied-learning-investigation">Exercise 7: Embodied Learning Investigation<a href="#exercise-7-embodied-learning-investigation" class="hash-link" aria-label="Lien direct vers Exercise 7: Embodied Learning Investigation" title="Lien direct vers Exercise 7: Embodied Learning Investigation" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand how physical interaction enables learning in embodied systems.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design a simple learning task for a simulated robot (e.g., learning to navigate to a light source)</li>
+<li class="">Compare learning performance with and without physical embodiment</li>
+<li class="">Analyze how the robot&#x27;s physical form influences its learning process</li>
+<li class="">Identify what can only be learned through physical interaction</li>
+</ol>
+<p><strong>Expected Output</strong>: Comparative analysis of embodied vs. non-embodied learning with specific examples.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear comparison between embodied and non-embodied learning approaches</li>
+<li class="">Identification of learning tasks that require physical embodiment</li>
+<li class="">Well-reasoned analysis of embodiment&#x27;s role in learning</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-8-sensor-fusion-challenge">Exercise 8: Sensor Fusion Challenge<a href="#exercise-8-sensor-fusion-challenge" class="hash-link" aria-label="Lien direct vers Exercise 8: Sensor Fusion Challenge" title="Lien direct vers Exercise 8: Sensor Fusion Challenge" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Implement and evaluate sensor fusion in an embodied system.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design a robot that uses multiple sensor types (e.g., camera, IMU, proximity sensors)</li>
+<li class="">Implement a basic sensor fusion algorithm to combine sensor data</li>
+<li class="">Test the system with individual sensors disabled to evaluate robustness</li>
+<li class="">Analyze how sensor fusion improves the robot&#x27;s capabilities compared to single sensors</li>
+</ol>
+<p><strong>Expected Output</strong>: Sensor fusion implementation with performance analysis and robustness evaluation.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Successful implementation of sensor fusion algorithm</li>
+<li class="">Demonstrated improvement in capabilities through fusion</li>
+<li class="">Effective handling of sensor failures</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-9-morphological-computation-exploration">Exercise 9: Morphological Computation Exploration<a href="#exercise-9-morphological-computation-exploration" class="hash-link" aria-label="Lien direct vers Exercise 9: Morphological Computation Exploration" title="Lien direct vers Exercise 9: Morphological Computation Exploration" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Investigate how physical design contributes to intelligent behavior.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design two robot morphologies with different physical properties (e.g., rigid vs. compliant joints)</li>
+<li class="">Implement the same control algorithm on both morphologies</li>
+<li class="">Compare their performance on a specific task (e.g., traversing rough terrain)</li>
+<li class="">Analyze how the physical design affects the required control complexity</li>
+</ol>
+<p><strong>Expected Output</strong>: Comparison report highlighting the role of morphology in intelligent behavior.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear demonstration of morphological effects on behavior</li>
+<li class="">Proper experimental setup with controlled variables</li>
+<li class="">Well-reasoned analysis of morphology-control interactions</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-10-real-time-constraint-analysis">Exercise 10: Real-time Constraint Analysis<a href="#exercise-10-real-time-constraint-analysis" class="hash-link" aria-label="Lien direct vers Exercise 10: Real-time Constraint Analysis" title="Lien direct vers Exercise 10: Real-time Constraint Analysis" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand real-time requirements in physical AI systems.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Implement a simple reactive behavior (e.g., obstacle avoidance) with different response time requirements</li>
+<li class="">Analyze how timing constraints affect the behavior&#x27;s effectiveness</li>
+<li class="">Identify critical timing paths in the perception-action cycle</li>
+<li class="">Propose strategies for meeting real-time constraints in physical systems</li>
+</ol>
+<p><strong>Expected Output</strong>: Timing analysis with strategies for real-time constraint satisfaction.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear identification of timing constraints and their effects</li>
+<li class="">Practical strategies for meeting real-time requirements</li>
+<li class="">Evidence-based analysis of timing-performance relationships</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-11-affordance-learning-challenge">Exercise 11: Affordance Learning Challenge<a href="#exercise-11-affordance-learning-challenge" class="hash-link" aria-label="Lien direct vers Exercise 11: Affordance Learning Challenge" title="Lien direct vers Exercise 11: Affordance Learning Challenge" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand how robots learn to recognize action possibilities in their environment.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Create a simulated environment with various objects that afford different interactions (pushing, grasping, climbing)</li>
+<li class="">Implement a simple learning algorithm that allows the robot to discover these affordances through interaction</li>
+<li class="">Analyze how the robot&#x27;s morphology affects which affordances it can learn</li>
+<li class="">Evaluate the learned affordances in novel environments</li>
+</ol>
+<p><strong>Expected Output</strong>: Affordance learning implementation with evaluation metrics and morphology analysis.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Successful discovery of environment affordances</li>
+<li class="">Clear demonstration of morphology&#x27;s effect on affordance learning</li>
+<li class="">Effective evaluation in novel environments</li>
+<li class="">Well-structured learning algorithm</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-12-morphological-adaptation-investigation">Exercise 12: Morphological Adaptation Investigation<a href="#exercise-12-morphological-adaptation-investigation" class="hash-link" aria-label="Lien direct vers Exercise 12: Morphological Adaptation Investigation" title="Lien direct vers Exercise 12: Morphological Adaptation Investigation" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Explore how physical adaptation affects behavioral capabilities.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design a robot with configurable physical properties (e.g., leg length, joint compliance)</li>
+<li class="">Implement a control system that can adapt to different morphological configurations</li>
+<li class="">Test the robot&#x27;s performance on various tasks with different morphologies</li>
+<li class="">Analyze the relationship between morphology and behavioral adaptability</li>
+</ol>
+<p><strong>Expected Output</strong>: Adaptive robot system with performance analysis across morphological configurations.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Successful implementation of morphological adaptation</li>
+<li class="">Clear performance comparison across configurations</li>
+<li class="">Well-reasoned analysis of morphology-behavior relationships</li>
+<li class="">Demonstrated adaptability to different morphologies</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-13-embodied-cognition-experiment">Exercise 13: Embodied Cognition Experiment<a href="#exercise-13-embodied-cognition-experiment" class="hash-link" aria-label="Lien direct vers Exercise 13: Embodied Cognition Experiment" title="Lien direct vers Exercise 13: Embodied Cognition Experiment" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Investigate how physical embodiment influences cognitive processes.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design a cognitive task that requires physical interaction (e.g., spatial reasoning, object permanence)</li>
+<li class="">Compare performance between embodied and non-embodied implementations</li>
+<li class="">Analyze how physical interaction contributes to cognitive processing</li>
+<li class="">Identify cognitive capabilities that emerge from embodiment</li>
+</ol>
+<p><strong>Expected Output</strong>: Comparative analysis of embodied vs. non-embodied cognitive processing with specific examples.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Clear demonstration of embodiment&#x27;s effect on cognition</li>
+<li class="">Well-designed cognitive task requiring physical interaction</li>
+<li class="">Thorough comparison between embodied and non-embodied approaches</li>
+<li class="">Identification of embodiment-specific cognitive capabilities</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-14-sensorimotor-learning-challenge">Exercise 14: Sensorimotor Learning Challenge<a href="#exercise-14-sensorimotor-learning-challenge" class="hash-link" aria-label="Lien direct vers Exercise 14: Sensorimotor Learning Challenge" title="Lien direct vers Exercise 14: Sensorimotor Learning Challenge" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Understand how sensorimotor patterns contribute to skill learning.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Implement a simple motor skill learning task (e.g., reaching, walking pattern)</li>
+<li class="">Analyze the sensorimotor contingencies involved in the skill</li>
+<li class="">Test how changes to sensorimotor mapping affect learning performance</li>
+<li class="">Design improvements based on sensorimotor learning principles</li>
+</ol>
+<p><strong>Expected Output</strong>: Sensorimotor learning implementation with analysis of contingencies and performance improvements.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Successful implementation of sensorimotor learning task</li>
+<li class="">Clear analysis of sensorimotor contingencies</li>
+<li class="">Demonstrated understanding of mapping-performance relationships</li>
+<li class="">Effective improvements based on sensorimotor principles</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-15-physical-intelligence-benchmarking">Exercise 15: Physical Intelligence Benchmarking<a href="#exercise-15-physical-intelligence-benchmarking" class="hash-link" aria-label="Lien direct vers Exercise 15: Physical Intelligence Benchmarking" title="Lien direct vers Exercise 15: Physical Intelligence Benchmarking" translate="no">​</a></h2>
+<p><strong>Objective</strong>: Develop metrics for evaluating physical intelligence in robotic systems.</p>
+<p><strong>Instructions</strong>:</p>
+<ol>
+<li class="">Design a set of benchmark tasks that test different aspects of physical intelligence</li>
+<li class="">Implement the benchmarks on a simulated robot platform</li>
+<li class="">Evaluate the robot&#x27;s performance across multiple physical intelligence dimensions</li>
+<li class="">Compare results with human and animal performance where applicable</li>
+</ol>
+<p><strong>Expected Output</strong>: Physical intelligence benchmarking framework with evaluation results and comparisons.</p>
+<p><strong>Validation Criteria</strong>:</p>
+<ul>
+<li class="">Comprehensive benchmark design covering multiple intelligence dimensions</li>
+<li class="">Successful implementation and evaluation of benchmarks</li>
+<li class="">Meaningful comparisons with human/animal performance</li>
+<li class="">Well-reasoned analysis of physical intelligence metrics</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="additional-resources">Additional Resources<a href="#additional-resources" class="hash-link" aria-label="Lien direct vers Additional Resources" title="Lien direct vers Additional Resources" translate="no">​</a></h2>
+<p>For more information on physical AI and embodied intelligence:</p>
+<ul>
+<li class=""><strong>Research Papers</strong>: Key publications in the field of embodied cognition and physical AI</li>
+<li class=""><strong>Software Tools</strong>: Recommended simulation environments and development frameworks</li>
+<li class=""><strong>Hardware Platforms</strong>: Overview of accessible humanoid robot platforms for experimentation</li>
+<li class=""><strong>Community Resources</strong>: Links to forums, workshops, and conferences in physical AI</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="assessment-rubric">Assessment Rubric<a href="#assessment-rubric" class="hash-link" aria-label="Lien direct vers Assessment Rubric" title="Lien direct vers Assessment Rubric" translate="no">​</a></h2>
+<p>Each exercise will be evaluated based on:</p>
+<ul>
+<li class=""><strong>Technical Implementation</strong>: Correctness and completeness of the solution</li>
+<li class=""><strong>Analysis Depth</strong>: Quality of analysis and understanding demonstrated</li>
+<li class=""><strong>Innovation</strong>: Creative approaches and novel insights</li>
+<li class=""><strong>Documentation</strong>: Clarity and completeness of written reports</li>
+<li class=""><strong>Validation</strong>: Evidence supporting conclusions and claims</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="submission-guidelines">Submission Guidelines<a href="#submission-guidelines" class="hash-link" aria-label="Lien direct vers Submission Guidelines" title="Lien direct vers Submission Guidelines" translate="no">​</a></h2>
+<ul>
+<li class="">Submit code implementations with clear documentation</li>
+<li class="">Include detailed analysis reports for each exercise</li>
+<li class="">Provide evidence of testing and validation</li>
+<li class="">Cite all sources and references appropriately</li>
+<li class="">Follow the 8-section structure for all written components</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="apa-citations">APA Citations<a href="#apa-citations" class="hash-link" aria-label="Lien direct vers APA Citations" title="Lien direct vers APA Citations" translate="no">​</a></h2>
+<ul>
+<li class="">Siciliano, B., &amp; Khatib, O. (2016). <em>Springer handbook of robotics</em>. Springer.</li>
+<li class="">Thrun, S., Burgard, W., &amp; Fox, D. (2005). <em>Probabilistic robotics</em>. MIT Press.</li>
+<li class="">Dudek, G., &amp; Jenkin, M. (2010). <em>Computational principles of mobile robotics</em>. Cambridge University Press.</li>
+<li class="">Spong, M. W., Hutchinson, S., &amp; Vidyasagar, M. (2020). <em>Robot modeling and control</em>. John Wiley &amp; Sons.</li>
+<li class="">Pfeifer, R., &amp; Bongard, J. (2006). <em>How the body shapes the way we think: A new view of intelligence</em>. MIT Press.</li>
+<li class="">Metta, G., Natale, L., Nori, F., &amp; Sandini, G. (2006). Simulation environments for developmental robotics. <em>IEEE Transactions on Autonomous Mental Development</em>, 1(1), 35-43.</li>
+<li class="">Clark, A. (2008). <em>Supersizing the mind: Embodiment, action, and cognitive extension</em>. Oxford University Press.</li>
+<li class="">Hutto, D. D., &amp; Myin, E. (2013). <em>Radicalizing enactivism: Basic minds without content</em>. MIT Press.</li>
+<li class="">Wheeler, M. (2005). <em>Reconstructing the cognitive world: The next decade</em>. MIT Press.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/noormusarrat/hackathon-book-robotics/edit/main/docs/intro/exercises.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Éditer cette page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Pages de documentation"><a class="pagination-nav__link pagination-nav__link--prev" href="/hackathon-book-robotics/fr/docs/intro/chapter-3"><div class="pagination-nav__sublabel">Précédent</div><div class="pagination-nav__label">Chapter 3: Embodied Intelligence Concepts</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/hackathon-book-robotics/fr/docs/module-1-ros2/"><div class="pagination-nav__sublabel">Suivant</div><div class="pagination-nav__label">Module 1 Overview</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#exercise-1-physical-ai-concepts" class="table-of-contents__link toc-highlight">Exercise 1: Physical AI Concepts</a></li><li><a href="#exercise-2-digital-to-physical-transition-analysis" class="table-of-contents__link toc-highlight">Exercise 2: Digital-to-Physical Transition Analysis</a></li><li><a href="#exercise-3-embodied-intelligence-exploration" class="table-of-contents__link toc-highlight">Exercise 3: Embodied Intelligence Exploration</a></li><li><a href="#exercise-4-simulation-vs-reality-challenge" class="table-of-contents__link toc-highlight">Exercise 4: Simulation vs. Reality Challenge</a></li><li><a href="#exercise-5-sensor-integration-challenge" class="table-of-contents__link toc-highlight">Exercise 5: Sensor Integration Challenge</a></li><li><a href="#exercise-6-environmental-interaction-challenge" class="table-of-contents__link toc-highlight">Exercise 6: Environmental Interaction Challenge</a></li><li><a href="#exercise-7-embodied-learning-investigation" class="table-of-contents__link toc-highlight">Exercise 7: Embodied Learning Investigation</a></li><li><a href="#exercise-8-sensor-fusion-challenge" class="table-of-contents__link toc-highlight">Exercise 8: Sensor Fusion Challenge</a></li><li><a href="#exercise-9-morphological-computation-exploration" class="table-of-contents__link toc-highlight">Exercise 9: Morphological Computation Exploration</a></li><li><a href="#exercise-10-real-time-constraint-analysis" class="table-of-contents__link toc-highlight">Exercise 10: Real-time Constraint Analysis</a></li><li><a href="#exercise-11-affordance-learning-challenge" class="table-of-contents__link toc-highlight">Exercise 11: Affordance Learning Challenge</a></li><li><a href="#exercise-12-morphological-adaptation-investigation" class="table-of-contents__link toc-highlight">Exercise 12: Morphological Adaptation Investigation</a></li><li><a href="#exercise-13-embodied-cognition-experiment" class="table-of-contents__link toc-highlight">Exercise 13: Embodied Cognition Experiment</a></li><li><a href="#exercise-14-sensorimotor-learning-challenge" class="table-of-contents__link toc-highlight">Exercise 14: Sensorimotor Learning Challenge</a></li><li><a href="#exercise-15-physical-intelligence-benchmarking" class="table-of-contents__link toc-highlight">Exercise 15: Physical Intelligence Benchmarking</a></li><li><a href="#additional-resources" class="table-of-contents__link toc-highlight">Additional Resources</a></li><li><a href="#assessment-rubric" class="table-of-contents__link toc-highlight">Assessment Rubric</a></li><li><a href="#submission-guidelines" class="table-of-contents__link toc-highlight">Submission Guidelines</a></li><li><a href="#apa-citations" class="table-of-contents__link toc-highlight">APA Citations</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon-book-robotics/fr/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Book. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-module-4-vla/exercises/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Module 4 Exercises: Vision-Language-Action Robotics | 🚀 Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://noormusarrat.github.io/hackathon-book-robotics/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://noormusarrat.github.io/hackathon-book-robotics/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-4-vla/exercises/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="fr"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Module 4 Exercises: Vision-Language-Action Robotics | 🚀 Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Hands-on exercises to practice VLA robotics concepts and implementation"><meta data-rh="true" property="og:description" content="Hands-on exercises to practice VLA robotics concepts and implementation"><link data-rh="true" rel="icon" href="/hackathon-book-robotics/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-4-vla/exercises/"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-4-vla/exercises/" hreflang="en"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/fr/docs/module-4-vla/exercises/" hreflang="fr"><link data-rh="true" rel="alternate" href="https://noormusarrat.github.io/hackathon-book-robotics/docs/module-4-vla/exercises/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Module 4 Exercises: Vision-Language-Action Robotics","item":"https://noormusarrat.github.io/hackathon-book-robotics/docs/module-4-vla/exercises/"}]}</script><link rel="stylesheet" href="/hackathon-book-robotics/assets/css/styles.200c5452.css">
+<script src="/hackathon-book-robotics/assets/js/runtime~main.dd6b3ec8.js" defer="defer"></script>
+<script src="/hackathon-book-robotics/assets/js/main.2dad1c6d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/hackathon-book-robotics/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon-book-robotics/"><div class="navbar__logo"><img src="/hackathon-book-robotics/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon-book-robotics/img/logo.svg" alt="Robotics Book Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/hackathon-book-robotics/docs/intro/">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/hackathon-book-robotics/docs/intro/"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/intro/chapter-1"><span title="Module 0: Introduction to Physical AI" class="categoryLinkLabel_W154">Module 0: Introduction to Physical AI</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-1-ros2/"><span title="Module 1: ROS 2 - Robotic Nervous System" class="categoryLinkLabel_W154">Module 1: ROS 2 - Robotic Nervous System</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-2-simulation/chapter-1"><span title="Module 2: Gazebo + Unity - Digital Twin" class="categoryLinkLabel_W154">Module 2: Gazebo + Unity - Digital Twin</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/hackathon-book-robotics/docs/module-3-isaac/chapter-1"><span title="Module 3: NVIDIA Isaac - Perception + Navigation" class="categoryLinkLabel_W154">Module 3: NVIDIA Isaac - Perception + Navigation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/hackathon-book-robotics/docs/module-4-vla/chapter-1"><span title="Module 4: VLA Robotics - Language to Action" class="categoryLinkLabel_W154">Module 4: VLA Robotics - Language to Action</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-1"><span title="Chapter 22: Introduction to Vision-Language-Action Systems" class="linkLabel_WmDU">Chapter 22: Introduction to Vision-Language-Action Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-2"><span title="Chapter 23: LLM Integration for Robotics" class="linkLabel_WmDU">Chapter 23: LLM Integration for Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-3"><span title="Chapter 24: Voice Input Processing" class="linkLabel_WmDU">Chapter 24: Voice Input Processing</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-4"><span title="Chapter 25: Natural Language Understanding" class="linkLabel_WmDU">Chapter 25: Natural Language Understanding</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-5"><span title="Chapter 26: Action Planning from Language" class="linkLabel_WmDU">Chapter 26: Action Planning from Language</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/"><span title="Module 4: VLA Robotics - Language to Action" class="linkLabel_WmDU">Module 4: VLA Robotics - Language to Action</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-6"><span title="Chapter 27: Voice-to-Action Pipeline Implementation" class="linkLabel_WmDU">Chapter 27: Voice-to-Action Pipeline Implementation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/chapter-7"><span title="Chapter 28: Human-Robot Interaction" class="linkLabel_WmDU">Chapter 28: Human-Robot Interaction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/exercises/"><span title="Module 4 Exercises: Vision-Language-Action Robotics" class="linkLabel_WmDU">Module 4 Exercises: Vision-Language-Action Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon-book-robotics/docs/module-4-vla/examples/"><span title="Module 4 Examples: VLA Robotics Code Samples" class="linkLabel_WmDU">Module 4 Examples: VLA Robotics Code Samples</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/hackathon-book-robotics/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Module 4: VLA Robotics - Language to Action</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Module 4 Exercises: Vision-Language-Action Robotics</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Module 4 Exercises: Vision-Language-Action Robotics</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-1-basic-voice-command-implementation">Exercise 1: Basic Voice Command Implementation<a href="#exercise-1-basic-voice-command-implementation" class="hash-link" aria-label="Direct link to Exercise 1: Basic Voice Command Implementation" title="Direct link to Exercise 1: Basic Voice Command Implementation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective">Objective<a href="#objective" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement a basic voice command system that allows a simulated robot to respond to simple navigation commands.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">Requirements<a href="#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Set up a ROS 2 environment with speech recognition capabilities</li>
+<li class="">Implement voice processing node that can recognize basic commands</li>
+<li class="">Create navigation responses to voice commands</li>
+<li class="">Test with simulated or real microphone input</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps">Steps<a href="#steps" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Setup Environment</strong></p>
+<ul>
+<li class="">Install required speech recognition packages: <code>speech_recognition</code>, <code>pyaudio</code></li>
+<li class="">Configure audio input device</li>
+<li class="">Set up ROS 2 workspace with necessary dependencies</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Implement Voice Processing Node</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Create a basic voice processing node that listens for commands</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Commands to recognize: &quot;move forward&quot;, &quot;turn left&quot;, &quot;turn right&quot;, &quot;stop&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Publish appropriate Twist messages based on recognized commands</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Integration Testing</strong></p>
+<ul>
+<li class="">Test with Gazebo simulation</li>
+<li class="">Verify robot responds correctly to voice commands</li>
+<li class="">Document response accuracy and latency</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria">Validation Criteria<a href="#validation-criteria" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Robot responds to voice commands within 2 seconds</li>
+<li class="">Recognition accuracy &gt;80% in quiet environment</li>
+<li class="">Proper safety measures implemented (emergency stop)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level">Difficulty Level<a href="#difficulty-level" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Intermediate</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-2-natural-language-understanding-pipeline">Exercise 2: Natural Language Understanding Pipeline<a href="#exercise-2-natural-language-understanding-pipeline" class="hash-link" aria-label="Direct link to Exercise 2: Natural Language Understanding Pipeline" title="Direct link to Exercise 2: Natural Language Understanding Pipeline" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-1">Objective<a href="#objective-1" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Build a natural language understanding system that can interpret complex commands and extract relevant information.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-1">Requirements<a href="#requirements-1" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Implement intent recognition for multiple command types</li>
+<li class="">Extract named entities (objects, locations, parameters)</li>
+<li class="">Map natural language to robot actions</li>
+<li class="">Handle ambiguous or unclear commands</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps-1">Steps<a href="#steps-1" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Define Command Types</strong></p>
+<ul>
+<li class="">Navigation: &quot;Go to the kitchen&quot;, &quot;Move forward 2 meters&quot;</li>
+<li class="">Manipulation: &quot;Pick up the red cup&quot;, &quot;Place the book on the table&quot;</li>
+<li class="">Information: &quot;What time is it?&quot;, &quot;Tell me about yourself&quot;</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Implement NLU System</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Create pattern matching rules for different intents</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Implement entity extraction for objects, locations, and parameters</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Add confidence scoring for interpretations</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Testing and Validation</strong></p>
+<ul>
+<li class="">Test with various phrasings of the same command</li>
+<li class="">Validate entity extraction accuracy</li>
+<li class="">Implement fallback for unrecognized commands</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-1">Validation Criteria<a href="#validation-criteria-1" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Correctly identifies intent in &gt;85% of test cases</li>
+<li class="">Accurately extracts entities with &gt;80% precision</li>
+<li class="">Provides helpful feedback for unrecognized commands</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level-1">Difficulty Level<a href="#difficulty-level-1" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Intermediate</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-3-voice-to-action-pipeline-integration">Exercise 3: Voice-to-Action Pipeline Integration<a href="#exercise-3-voice-to-action-pipeline-integration" class="hash-link" aria-label="Direct link to Exercise 3: Voice-to-Action Pipeline Integration" title="Direct link to Exercise 3: Voice-to-Action Pipeline Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-2">Objective<a href="#objective-2" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Integrate voice processing, natural language understanding, and action planning into a complete pipeline.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-2">Requirements<a href="#requirements-2" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Connect voice processing to NLU system</li>
+<li class="">Link NLU output to action planning</li>
+<li class="">Implement complete pipeline with error handling</li>
+<li class="">Add user feedback mechanisms</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps-2">Steps<a href="#steps-2" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Pipeline Architecture</strong></p>
+<ul>
+<li class="">Design message passing between components</li>
+<li class="">Implement state management for pipeline</li>
+<li class="">Add error handling and recovery mechanisms</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Implementation</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Create main pipeline node that orchestrates all components</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Implement state machine for pipeline operation</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Add monitoring and logging capabilities</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Testing</strong></p>
+<ul>
+<li class="">Test complete pipeline with various commands</li>
+<li class="">Measure end-to-end response time</li>
+<li class="">Validate error handling scenarios</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-2">Validation Criteria<a href="#validation-criteria-2" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">End-to-end response time 3 seconds</li>
+<li class="">Pipeline handles errors gracefully</li>
+<li class="">Provides clear feedback to users</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level-2">Difficulty Level<a href="#difficulty-level-2" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Advanced</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-4-human-robot-interaction-behaviors">Exercise 4: Human-Robot Interaction Behaviors<a href="#exercise-4-human-robot-interaction-behaviors" class="hash-link" aria-label="Direct link to Exercise 4: Human-Robot Interaction Behaviors" title="Direct link to Exercise 4: Human-Robot Interaction Behaviors" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-3">Objective<a href="#objective-3" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Implement social behaviors that make human-robot interaction more natural and intuitive.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-3">Requirements<a href="#requirements-3" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Implement proximity-based interaction modes</li>
+<li class="">Add social feedback mechanisms</li>
+<li class="">Create context-aware responses</li>
+<li class="">Test multi-user scenarios</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps-3">Steps<a href="#steps-3" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Proximity Detection</strong></p>
+<ul>
+<li class="">Use laser scanner or simulated sensor data</li>
+<li class="">Implement proxemics zones (personal, social, public space)</li>
+<li class="">Trigger appropriate behaviors based on user proximity</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Social Behaviors</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Implement greeting behavior when user approaches</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Add acknowledgment when user enters interaction space</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Create farewell behavior when user leaves</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Implement attention-getting behavior when needed</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Context Management</strong></p>
+<ul>
+<li class="">Track conversation state with users</li>
+<li class="">Maintain interaction history</li>
+<li class="">Implement turn-taking mechanisms</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-3">Validation Criteria<a href="#validation-criteria-3" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Correctly identifies user proximity zones</li>
+<li class="">Behaviors match social expectations</li>
+<li class="">Handles multiple users appropriately</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level-3">Difficulty Level<a href="#difficulty-level-3" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Advanced</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-5-llm-integration-for-complex-reasoning">Exercise 5: LLM Integration for Complex Reasoning<a href="#exercise-5-llm-integration-for-complex-reasoning" class="hash-link" aria-label="Direct link to Exercise 5: LLM Integration for Complex Reasoning" title="Direct link to Exercise 5: LLM Integration for Complex Reasoning" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-4">Objective<a href="#objective-4" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Integrate a large language model to handle complex reasoning and multi-step command interpretation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-4">Requirements<a href="#requirements-4" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Set up LLM interface (local or API-based)</li>
+<li class="">Implement prompt engineering for robotics tasks</li>
+<li class="">Create safety mechanisms for LLM outputs</li>
+<li class="">Test with multi-step commands</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps-4">Steps<a href="#steps-4" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>LLM Setup</strong></p>
+<ul>
+<li class="">Choose appropriate LLM (consider local options like Llama for privacy)</li>
+<li class="">Implement API interface or local model loading</li>
+<li class="">Create structured prompt templates</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Integration</strong></p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># Create prompt templates for different robot capabilities</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Implement response parsing for structured robot commands</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Add safety validation for LLM-generated commands</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Testing</strong></p>
+<ul>
+<li class="">Test with complex, multi-step commands</li>
+<li class="">Validate safety of generated actions</li>
+<li class="">Measure reasoning accuracy</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-4">Validation Criteria<a href="#validation-criteria-4" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Safely interprets complex commands</li>
+<li class="">Generated actions are safe for robot execution</li>
+<li class="">Response time acceptable for interaction</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level-4">Difficulty Level<a href="#difficulty-level-4" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Advanced</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-6-real-world-deployment-considerations">Exercise 6: Real-World Deployment Considerations<a href="#exercise-6-real-world-deployment-considerations" class="hash-link" aria-label="Direct link to Exercise 6: Real-World Deployment Considerations" title="Direct link to Exercise 6: Real-World Deployment Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-5">Objective<a href="#objective-5" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Address practical challenges of deploying VLA systems in real environments.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-5">Requirements<a href="#requirements-5" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Implement noise robustness features</li>
+<li class="">Add privacy controls</li>
+<li class="">Create performance monitoring</li>
+<li class="">Design fallback mechanisms</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps-5">Steps<a href="#steps-5" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>Noise Robustness</strong></p>
+<ul>
+<li class="">Implement noise cancellation algorithms</li>
+<li class="">Test in various acoustic environments</li>
+<li class="">Add confidence-based rejection of poor recognition</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Privacy and Security</strong></p>
+<ul>
+<li class="">Implement local processing where possible</li>
+<li class="">Add data encryption for sensitive interactions</li>
+<li class="">Create user consent mechanisms</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Performance Monitoring</strong></p>
+<ul>
+<li class="">Track recognition accuracy over time</li>
+<li class="">Monitor system resource usage</li>
+<li class="">Implement logging for debugging</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-5">Validation Criteria<a href="#validation-criteria-5" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">System performs well in noisy environments</li>
+<li class="">Privacy controls are effective</li>
+<li class="">Performance metrics are tracked and accessible</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level-5">Difficulty Level<a href="#difficulty-level-5" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Advanced</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exercise-7-capstone---complete-vla-robot-assistant">Exercise 7: Capstone - Complete VLA Robot Assistant<a href="#exercise-7-capstone---complete-vla-robot-assistant" class="hash-link" aria-label="Direct link to Exercise 7: Capstone - Complete VLA Robot Assistant" title="Direct link to Exercise 7: Capstone - Complete VLA Robot Assistant" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="objective-6">Objective<a href="#objective-6" class="hash-link" aria-label="Direct link to Objective" title="Direct link to Objective" translate="no">​</a></h3>
+<p>Combine all learned concepts to create a complete voice-controlled robot assistant.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements-6">Requirements<a href="#requirements-6" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Integrate all components from previous exercises</li>
+<li class="">Create natural, fluid interaction experience</li>
+<li class="">Implement comprehensive error handling</li>
+<li class="">Demonstrate practical utility</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="steps-6">Steps<a href="#steps-6" class="hash-link" aria-label="Direct link to Steps" title="Direct link to Steps" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>System Integration</strong></p>
+<ul>
+<li class="">Combine voice processing, NLU, action planning, and HRI</li>
+<li class="">Implement complete state management</li>
+<li class="">Add comprehensive error handling</li>
+</ul>
+</li>
+<li class="">
+<p><strong>User Experience</strong></p>
+<ul>
+<li class="">Create natural conversation flow</li>
+<li class="">Implement context-aware responses</li>
+<li class="">Add personality and social behaviors</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Validation</strong></p>
+<ul>
+<li class="">Conduct user testing sessions</li>
+<li class="">Measure task completion rates</li>
+<li class="">Gather feedback on interaction quality</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-criteria-6">Validation Criteria<a href="#validation-criteria-6" class="hash-link" aria-label="Direct link to Validation Criteria" title="Direct link to Validation Criteria" translate="no">​</a></h3>
+<ul>
+<li class="">Completes &gt;80% of assigned tasks successfully</li>
+<li class="">Users rate interaction as natural and helpful</li>
+<li class="">System handles errors gracefully without user confusion</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="difficulty-level-6">Difficulty Level<a href="#difficulty-level-6" class="hash-link" aria-label="Direct link to Difficulty Level" title="Direct link to Difficulty Level" translate="no">​</a></h3>
+<p>Expert</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="additional-resources">Additional Resources<a href="#additional-resources" class="hash-link" aria-label="Direct link to Additional Resources" title="Direct link to Additional Resources" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-tools">Testing Tools<a href="#testing-tools" class="hash-link" aria-label="Direct link to Testing Tools" title="Direct link to Testing Tools" translate="no">​</a></h3>
+<ul>
+<li class="">Audio testing files for speech recognition validation</li>
+<li class="">Simulation environments for safe testing</li>
+<li class="">Performance benchmarking scripts</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting-guide">Troubleshooting Guide<a href="#troubleshooting-guide" class="hash-link" aria-label="Direct link to Troubleshooting Guide" title="Direct link to Troubleshooting Guide" translate="no">​</a></h3>
+<ul>
+<li class="">Common issues with speech recognition</li>
+<li class="">Debugging NLU parsing problems</li>
+<li class="">Action planning failure scenarios</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="extension-ideas">Extension Ideas<a href="#extension-ideas" class="hash-link" aria-label="Direct link to Extension Ideas" title="Direct link to Extension Ideas" translate="no">​</a></h3>
+<ul>
+<li class="">Multi-language support</li>
+<li class="">Emotion recognition and response</li>
+<li class="">Learning from user interactions</li>
+<li class="">Integration with smart home systems</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/noormusarrat/hackathon-book-robotics/edit/main/docs/module-4-vla/exercises/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/hackathon-book-robotics/docs/module-4-vla/chapter-7"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Chapter 28: Human-Robot Interaction</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/hackathon-book-robotics/docs/module-4-vla/examples/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Module 4 Examples: VLA Robotics Code Samples</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#exercise-1-basic-voice-command-implementation" class="table-of-contents__link toc-highlight">Exercise 1: Basic Voice Command Implementation</a><ul><li><a href="#objective" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#exercise-2-natural-language-understanding-pipeline" class="table-of-contents__link toc-highlight">Exercise 2: Natural Language Understanding Pipeline</a><ul><li><a href="#objective-1" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements-1" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps-1" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria-1" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level-1" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#exercise-3-voice-to-action-pipeline-integration" class="table-of-contents__link toc-highlight">Exercise 3: Voice-to-Action Pipeline Integration</a><ul><li><a href="#objective-2" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements-2" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps-2" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria-2" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level-2" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#exercise-4-human-robot-interaction-behaviors" class="table-of-contents__link toc-highlight">Exercise 4: Human-Robot Interaction Behaviors</a><ul><li><a href="#objective-3" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements-3" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps-3" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria-3" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level-3" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#exercise-5-llm-integration-for-complex-reasoning" class="table-of-contents__link toc-highlight">Exercise 5: LLM Integration for Complex Reasoning</a><ul><li><a href="#objective-4" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements-4" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps-4" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria-4" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level-4" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#exercise-6-real-world-deployment-considerations" class="table-of-contents__link toc-highlight">Exercise 6: Real-World Deployment Considerations</a><ul><li><a href="#objective-5" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements-5" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps-5" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria-5" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level-5" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#exercise-7-capstone---complete-vla-robot-assistant" class="table-of-contents__link toc-highlight">Exercise 7: Capstone - Complete VLA Robot Assistant</a><ul><li><a href="#objective-6" class="table-of-contents__link toc-highlight">Objective</a></li><li><a href="#requirements-6" class="table-of-contents__link toc-highlight">Requirements</a></li><li><a href="#steps-6" class="table-of-contents__link toc-highlight">Steps</a></li><li><a href="#validation-criteria-6" class="table-of-contents__link toc-highlight">Validation Criteria</a></li><li><a href="#difficulty-level-6" class="table-of-contents__link toc-highlight">Difficulty Level</a></li></ul></li><li><a href="#additional-resources" class="table-of-contents__link toc-highlight">Additional Resources</a><ul><li><a href="#testing-tools" class="table-of-contents__link toc-highlight">Testing Tools</a></li><li><a href="#troubleshooting-guide" class="table-of-contents__link toc-highlight">Troubleshooting Guide</a></li><li><a href="#extension-ideas" class="table-of-contents__link toc-highlight">Extension Ideas</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon-book-robotics/docs/intro">Introduction</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/noormusarrat/hackathon-book-robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Book. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
