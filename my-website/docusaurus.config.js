@@ -8,7 +8,7 @@ const config = {
   title: '🚀 Physical AI & Humanoid Robotics',
   tagline: 'From Digital Intelligence to Embodied Agents',
   url: 'https://github.com/noormusarrat',
-  baseUrl: '/hackathon-book-robotics/',
+  baseUrl: '/vercel/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -25,6 +25,8 @@ const config = {
     locales: ['en', 'fr'],
   },
 
+  url: ''
+    
     presets: [
   [
     'classic',
