@@ -26,8 +26,6 @@ const config = {
   },
 
   url: ''
-    export default {
-  baseUrl: '/vercel.app/',
 };
     presets: [
   [
